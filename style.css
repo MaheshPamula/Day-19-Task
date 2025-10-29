@@ -1,111 +1,95 @@
 
-.btn, .btn2 {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  color: black;
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-/* First Button */
-.btn {
-  background-color: lightgreen;
-  margin: 20px;
+/* -- Overlapping Boxes Z-Index  -- */
+.container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin-bottom: 50px;
 }
 
-.btn:hover {
-  background-color: orange;
-}
-
-.btn:active {
-  background-color: black;
+.box {
+  width: 150px;
+  height: 150px;
   color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  opacity: 0.8;
+  position: absolute;
+  transition: transform 0.3s ease;
 }
 
-/* Second Button */
-.btn2 {
-  background-color: skyblue;
-  margin: 20px;
-}
-
-.btn2:hover {
-  background-color: yellow;
-}
-
-.btn2:active {
-  background-color: black;
-  color: white;
-}
-
-/* ---------- Paragraph Styles ---------- */
-p {
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-/* First letter style for paragraphs */
-
-p::first-letter {
-  color: blue;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Paragraph  */
-
-.para::first-letter {
-  color: red;
-  font-style: italic;
-  text-decoration: underline;
-}
-
-/* Paragraph big */
-.big::first-line {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* --- List Styles --- */
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  display: inline-block;
-  background-color: teal;
-  color: white;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-/* nth-child practice */
-
-.list1 li:nth-child(odd) {
-  background-color: green;
-}
-
-.list1 li:nth-child(3) {
+.box1 {
   background-color: red;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
 }
 
-.list2 li:nth-child(2) {
+.box2 {
+  background-color: green;
+  top: 120px;
+  left: 120px;
+  z-index: 2;
+}
+
+.box3 {
   background-color: blue;
+  top: 200px;
+  left: 220px;
+  z-index: 3;
 }
 
-.list2 li:nth-child(4) {
-  background-color: purple;
+/* Hover effect  all boxes */
+.box:hover {
+  transform: scale(0.85);
 }
 
-/* Before and after heart icons */
-
-ul li::before,
-ul li::after {
-  content: "💗";
-  margin: 0 4px;
+/* ---------- Card with Badge ---------- */
+.card {
+  position: relative;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
 }
 
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: crimson;
+  color: white;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 15px;
+  font-weight: bold;
+}
 
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
