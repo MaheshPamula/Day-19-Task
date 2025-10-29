@@ -1,0 +1,111 @@
+
+.btn, .btn2 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: black;
+}
+
+/* First Button */
+.btn {
+  background-color: lightgreen;
+  margin: 20px;
+}
+
+.btn:hover {
+  background-color: orange;
+}
+
+.btn:active {
+  background-color: black;
+  color: white;
+}
+
+/* Second Button */
+.btn2 {
+  background-color: skyblue;
+  margin: 20px;
+}
+
+.btn2:hover {
+  background-color: yellow;
+}
+
+.btn2:active {
+  background-color: black;
+  color: white;
+}
+
+/* ---------- Paragraph Styles ---------- */
+p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* First letter style for paragraphs */
+
+p::first-letter {
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Paragraph  */
+
+.para::first-letter {
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Paragraph big */
+.big::first-line {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* --- List Styles --- */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  background-color: teal;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* nth-child practice */
+
+.list1 li:nth-child(odd) {
+  background-color: green;
+}
+
+.list1 li:nth-child(3) {
+  background-color: red;
+}
+
+.list2 li:nth-child(2) {
+  background-color: blue;
+}
+
+.list2 li:nth-child(4) {
+  background-color: purple;
+}
+
+/* Before and after heart icons */
+
+ul li::before,
+ul li::after {
+  content: "💗";
+  margin: 0 4px;
+}
+
+
